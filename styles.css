@@ -12,7 +12,7 @@ body{
     background-size: cover;
 }
 
-.container{
+#container{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -119,6 +119,42 @@ body{
     margin: 0;
 }
 
+.flashCard{
+   text-align: center;
+    width: 50%;
+    height: 550px;
+    margin: auto;
+    padding: 20px;
+    background-color: #563C5C;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    border: 2px double black;
+    color: white;
+    
+}
+
+.flashCard > h1{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    padding: 10px;
+    border-radius: 12px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+}
   
 
-
+.war{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
