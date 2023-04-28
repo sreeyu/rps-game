@@ -75,11 +75,18 @@ body{
     color: #f94f6d;
   }
 
-.arena{
+#arena{
     background-color: rgba(86, 60, 92, 0.5); /* transparent white */
     width: 800px;
     height: 300px;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#arena > img{
+    height: 200px;
 }
 
 .btns{

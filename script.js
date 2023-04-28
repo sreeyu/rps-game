@@ -1,5 +1,3 @@
-
-
 function showFlashCard() {
     
     const flash = document.getElementById("flashCard");
@@ -50,9 +48,9 @@ function showFlashCard() {
         <button class="btn" onclick="hideFlashCard()">Let the war begin!</button>
         `;
     flash.appendChild(flashCard);
-  }
+}
 
-  function hideFlashCard() {
+function hideFlashCard() {
     
     // remove the flash card from the DOM
     const contain = document.getElementById('container');
@@ -80,12 +78,111 @@ function showFlashCard() {
             </div>
         </div>
     </div>
-    <div class="arena"></div>
+    <div id="arena">
+        <img src="" id='playerImg' />
+        <h1 id='naration'></h1>
+        <img src ="" id='compImg' />
+    </div>
     <h1 class="heading">Make your choice :</h1>
     <div class="btns">
-        <img src="./images/athena.png" alt="warrior" class="btn-img warrior">
-        <img src="./images/dragon (1).png" alt="dragon" class="btn-img dragon">
-        <img src="./images/mushroom.png" alt="mushroom" class="btn-img shroom">
+        <img src="./images/athena.png" alt="warrior" class="btn-img warrior" id ='warrior' onclick='showImage(this.id)'>
+        <img src="./images/dragon (1).png" alt="dragon" class="btn-img dragon" id='dragon' onclick='showImage(this.id)'>
+        <img src="./images/mushroom.png" alt="mushroom" class="btn-img shroom" id='mushroom' onclick='showImage(this.id)'>
     </div>`;
     gameplay.appendChild(war);
+    const playerImg = document.getElementById('playerImg');
+    const compImg = document.getElementById('compImg');
+    const field = document.getElementById('naration');
+    
 }
+
+
+
+function showImage(id){
+    const image = document.getElementById(id);
+    const displayImg = document.getElementById('playerImg');
+    displayImg.src = image.src;
+
+    const arr =[
+        "./images/athena.png", 
+        "./images/dragon (1).png", 
+        "./images/mushroom.png"
+    ];
+    
+    let randomIndex = Math.floor(Math.random()* arr.length);
+    const displayCompImg = document.getElementById("compImg");
+    displayCompImg.src = arr[randomIndex];
+    
+    const naration = document.getElementById('naration');
+    naration.textContent = "hey";
+    
+}
+
+// initialize Scores
+
+
+
+
+
+
+
+//Get computer input
+
+/*function getComputerChoice(){
+    let arr = ["rock", "paper", "scissors"];
+    let randomIndex = Math.floor(Math.random()* arr.length);
+    let randomElement = arr[randomIndex];
+    return randomElement;
+}
+
+
+//Keep track of the points and rounds
+
+function playRound(playerSelection, computerSelection){
+
+    
+    if (playerSelection === computerSelection){
+        console.log("It is a tie")
+        return "tie";
+    }
+    else if (playerSelection === "rock" && computerSelection === "paper"){
+        console.log("You lose! Paper beats Rock");
+        return "lose";
+    }
+    else if(playerSelection === "paper" && computerSelection === "scissors"){
+        console.log("You lose! Scissors beats paper");
+        return "lose";
+    }
+    else if(playerSelection === "scissors" && computerSelection === "rock"){
+        console.log("You lose! Rock beats scissors");
+        return "lose";
+    }
+    else {
+        console.log("You get a point!")
+        return "win";
+    }
+    
+}
+
+function gameRound(){
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for(let i = 0; i < 5; i++){
+        let playerSelection = prompt("Choose rock, paper or scissors!");
+        console.log (playerSelection);
+        let computerSelection = getComputerChoice();
+        console.log(computerSelection);
+        let scores = playRound(playerSelection, computerSelection);
+        if (scores === "win"){
+            playerScore += 1;
+        }
+        else if (scores === "lose"){
+            computerScore += 1;
+        }
+        console.log(`Player Score = ${playerScore} and Computer Score = ${computerScore}`);
+    }
+}
+
+gameRound() */
