@@ -68,53 +68,199 @@ function hideFlashCard() {
                 <div class="col col-heading">
                     <h1>Player</h1>
                 </div>
-                <div class="col col-display" id="scoreHome">0</div>
+                <div class="col col-display" id="scorePlayer">0</div>
             </div>
             <div class="row">
                 <div class="col col-heading">
                     <h1>Shadow</h1>
                 </div>
-                <div class="col col-display" id="scoreHome">0</div>
+                <div class="col col-display" id="scoreComp">0</div>
             </div>
         </div>
     </div>
     <div id="arena">
         <img src="" id='playerImg' />
-        <h1 id='naration'></h1>
+        <p id='naration'></p>
         <img src ="" id='compImg' />
     </div>
     <h1 class="heading">Make your choice :</h1>
     <div class="btns">
-        <img src="./images/athena.png" alt="warrior" class="btn-img warrior" id ='warrior' onclick='showImage(this.id)'>
-        <img src="./images/dragon (1).png" alt="dragon" class="btn-img dragon" id='dragon' onclick='showImage(this.id)'>
-        <img src="./images/mushroom.png" alt="mushroom" class="btn-img shroom" id='mushroom' onclick='showImage(this.id)'>
+        <img src="./images/athena.png" alt="warrior" class="btn-img" id ='warrior' onclick='showImage(this.id)'>
+        <img src="./images/dragon (1).png" alt="dragon" class="btn-img" id='dragon' onclick='showImage(this.id)'>
+        <img src="./images/mushroom.png" alt="mushroom" class="btn-img" id='mushroom' onclick='showImage(this.id)'>
     </div>`;
     gameplay.appendChild(war);
     const playerImg = document.getElementById('playerImg');
     const compImg = document.getElementById('compImg');
     const field = document.getElementById('naration');
+    const pscore = document.getElementById('scorePlayer');
+    const cscore = document.getElementById('scoreComp');
     
 }
 
-
+let functionCall = 0;
+let player = 0;
+let comp = 0;
 
 function showImage(id){
-    const image = document.getElementById(id);
-    const displayImg = document.getElementById('playerImg');
-    displayImg.src = image.src;
+    
+    functionCall += 1;
+    
+    if (functionCall <= 5){
+        const image = document.getElementById(id);
+        const displayImg = document.getElementById('playerImg');
 
-    const arr =[
-        "./images/athena.png", 
-        "./images/dragon (1).png", 
-        "./images/mushroom.png"
-    ];
+        displayImg.src = image.src;
+        
+        const arr =[
+            "./images/athena.png", 
+            "./images/dragon (1).png", 
+            "./images/mushroom.png"
+        ];
+        
+        let randomIndex = Math.floor(Math.random()* arr.length);
+        const displayCompImg = document.getElementById("compImg");
+        displayCompImg.src = arr[randomIndex];
+
+        const naration = document.getElementById('naration');
+        
+        const pscore = document.getElementById('scorePlayer');
+        const cscore = document.getElementById('scoreComp');
+
+
+        if(id ==='warrior' && randomIndex === 0){
+            naration.textContent = `The two warriors 
+            stood on opposite ends of the 
+            battlefield, each ready to strike the 
+            other down. They clashed swords and 
+            shields, neither giving an inch to the 
+            other. Blow after blow was exchanged, 
+            but neither could land a decisive hit. 
+            In the end, both warriors stood, 
+            battered and bruised, but the fight had 
+            gone nowhere, resulting in a tie.`;
+            
+        }
+
+        else if(id ==='warrior' && randomIndex === 1){
+            naration.textContent = `The warrior and 
+            the dragon locked eyes, ready to fight. 
+            With a swift swing of his sword, the 
+            warrior struck the dragon's vulnerable 
+            spot. The dragon let out a final roar 
+            before collapsing to the ground defeated.
+            You get a point!`;
+            player += 1;
+            pscore.innerHTML = player;
+        }
+
+        else if (id === 'warrior' && randomIndex === 2){
+            naration.textContent = `The warrior 
+            charged towards the mushroom, his sword 
+            gleaming in the sunlight. But as he 
+            approached, the mushroom released a 
+            cloud of poisonous gas that engulfed him. 
+            The warrior fell to the ground, defeated, 
+            as the mushroom stood tall, victorious.
+            Shadow Lord gets a point`;
+            comp += 1;
+            cscore.innerHTML = comp;
+        }
+
+        else if(id ==='dragon' && randomIndex === 0){
+            naration.textContent = `The warrior and 
+            the dragon locked eyes, ready to fight. 
+            With a swift swing of his sword, the 
+            warrior struck the dragon's vulnerable 
+            spot. The dragon let out a final roar 
+            before collapsing to the ground defeated.
+            Shadow Lord gets the point`;
+            comp += 1;
+            cscore.innerHTML = comp;
+        }
+
+        else if(id ==='dragon' && randomIndex === 1){
+            naration.textContent = `The two dragons 
+            circled each other in the air, growling 
+            and snapping their jaws, neither able to 
+            gain the upper hand. Their powerful wings 
+            flapped furiously as they clashed in 
+            mid-air, but their strength was equally 
+            matched. Eventually, they both tired and 
+            landed on opposite sides of the mountain, 
+            their battle ending in a stalemate.
+            It's a tie`;
+            
+        }
+
+        else if (id === 'dragon' && randomIndex === 2){
+            naration.textContent = `The dragon let 
+            out a fierce roar as it breathed a 
+            stream of scorching flames towards the 
+            mushroom. The mushroom trembled and 
+            tried to defend itself with its 
+            poisonous fumes, but it was no match for 
+            the dragon's fiery power. In a matter of 
+            seconds, the mushroom was reduced to a 
+            pile of smoldering ashes, and the dragon 
+            emerged victorious from the battle.
+            You get a point`;
+            player += 1;
+            pscore.innerHTML = player;
+        }
+        else if(id ==='mushroom' && randomIndex === 0){
+            naration.textContent = `The warrior 
+            charged towards the mushroom, his sword 
+            gleaming in the sunlight. But as he 
+            approached, the mushroom released a 
+            cloud of poisonous gas that engulfed him. 
+            The warrior fell to the ground, defeated, 
+            as the mushroom stood tall, victorious.
+            You get a point`;
+            player += 1;
+            pscore.innerHTML = player;
+        }
+
+        else if(id ==='mushroom' && randomIndex === 1){
+            naration.textContent = `The dragon let 
+            out a fierce roar as it breathed a 
+            stream of scorching flames towards the 
+            mushroom. The mushroom trembled and 
+            tried to defend itself with its 
+            poisonous fumes, but it was no match for 
+            the dragon's fiery power. In a matter of 
+            seconds, the mushroom was reduced to a 
+            pile of smoldering ashes, and the dragon 
+            emerged victorious from the battle.
+            Shadow Lord gets a point`;
+            comp += 1;
+            cscore.innerHTML = comp;
+        }
+
+        else if (id === 'mushroom' && randomIndex === 2){
+            naration.textContent = `The two mushrooms 
+            stood facing each other, emitting their 
+            toxic fumes, but neither seemed to have 
+            a clear advantage. They continued to 
+            circle each other, waiting for an 
+            opening, but the fight went nowhere. 
+            Eventually, they both withdrew, 
+            acknowledging that it was a tie, and 
+            went back to their respective sides.
+            It's a tie`;
+            
+        }
+        
+        
+        
+    }
+
+    if (functionCall === 5){
+        const contain = document.getElementById('container');
+        const gameplay = document.getElementById('gamePlay');
+        contain.removeChild(gameplay);
+    }
     
-    let randomIndex = Math.floor(Math.random()* arr.length);
-    const displayCompImg = document.getElementById("compImg");
-    displayCompImg.src = arr[randomIndex];
-    
-    const naration = document.getElementById('naration');
-    naration.textContent = "hey";
     
 }
 

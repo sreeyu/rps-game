@@ -89,6 +89,15 @@ body{
     height: 200px;
 }
 
+#naration{
+    font-size: 20px;
+    background-color: rgb(86, 60, 92);
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
 .btns{
     background-color: rgba(224, 192, 230, 0.7);
     display: flex;
