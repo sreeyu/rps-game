@@ -174,3 +174,9 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+
+.result{
+    background-color: rgb(224, 192, 230);
+    padding: 20px;
+    border-radius: 20px;
+}

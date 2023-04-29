@@ -259,6 +259,62 @@ function showImage(id){
         const contain = document.getElementById('container');
         const gameplay = document.getElementById('gamePlay');
         contain.removeChild(gameplay);
+
+        if (player > comp){
+            contain.innerHTML = `<h1 class ='result'>YOU WON!</h1>
+            <div id="arena">
+                <p id='naration'>After the shadow 
+                lord loses the war, the player 
+                offers him a job at a local 
+                restaurant. The shadow lord, who is 
+                a terrible cook, keeps burning the 
+                food and causing chaos in the kitchen. 
+                However, his dragon's fire breath 
+                proves to be an effective way to 
+                cook food quickly, and the restaurant 
+                becomes a huge hit with customers who 
+                enjoy the "dragon-cooked" meals.</p>
+            </div>`;
+        }
+        else if(comp > player){
+            contain.innerHTML = `<h1 class ='result'>SHADOW LORD WON!</h1>
+            <div id="arena">
+                <p id='naration'>As the war ends 
+                with Shadow Lord's victory, he 
+                approaches you with a wide smile on 
+                his face. Instead of punishing you, 
+                he tells you that he's been looking 
+                for a baking partner for a long time 
+                and saw the potential in you during 
+                the battle. Shadow Lord reveals that 
+                he's actually a master baker and 
+                invites you to join him in his 
+                baking adventures. You are initially 
+                hesitant but after trying some of his 
+                delicious cakes and pastries, you 
+                gladly accept the offer and become his 
+                official sous-chef.</p>
+            </div>`;
+        }
+        else{
+            contain.innerHTML = `<h1 class ='result'>IT'S A TIE</h1>
+            <div id="arena">
+                <p id='naration'>As the war between 
+                you and the shadow lord came to an 
+                end in a tie, both sides were left 
+                clueless. Suddenly, the shadow lord 
+                approached you, causing fear and 
+                suspicion. But then, unexpectedly, 
+                the shadow lord got down on one knee 
+                and confessed his love for you. You 
+                were taken aback, but then you 
+                realized that you loved him too. 
+                So, you both decided to get married 
+                and rule the kingdom together, 
+                bringing peace and prosperity for 
+                all.</p>
+            </div>`;
+        }
     }
     
     
