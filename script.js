@@ -145,7 +145,7 @@ function showImage(id){
         else if(id ==='warrior' && randomIndex === 1){
             naration.textContent = `The warrior and 
             the dragon locked eyes, ready to fight. 
-            With a swift swing of his sword, the 
+            With a swift swing of her sword, the 
             warrior struck the dragon's vulnerable 
             spot. The dragon let out a final roar 
             before collapsing to the ground defeated.
@@ -156,8 +156,8 @@ function showImage(id){
 
         else if (id === 'warrior' && randomIndex === 2){
             naration.textContent = `The warrior 
-            charged towards the mushroom, his sword 
-            gleaming in the sunlight. But as he 
+            charged towards the mushroom, her sword 
+            gleaming in the sunlight. But as she 
             approached, the mushroom released a 
             cloud of poisonous gas that engulfed him. 
             The warrior fell to the ground, defeated, 
@@ -170,7 +170,7 @@ function showImage(id){
         else if(id ==='dragon' && randomIndex === 0){
             naration.textContent = `The warrior and 
             the dragon locked eyes, ready to fight. 
-            With a swift swing of his sword, the 
+            With a swift swing of her sword, the 
             warrior struck the dragon's vulnerable 
             spot. The dragon let out a final roar 
             before collapsing to the ground defeated.
@@ -210,8 +210,8 @@ function showImage(id){
         }
         else if(id ==='mushroom' && randomIndex === 0){
             naration.textContent = `The warrior 
-            charged towards the mushroom, his sword 
-            gleaming in the sunlight. But as he 
+            charged towards the mushroom, her sword 
+            gleaming in the sunlight. But as she 
             approached, the mushroom released a 
             cloud of poisonous gas that engulfed him. 
             The warrior fell to the ground, defeated, 
