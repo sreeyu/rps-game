@@ -333,6 +333,14 @@ body{
       border-radius: 12px;
       font-family: 'Dancing Script', cursive;
     }
+
+    .war{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
   
     .result {
       background-color: rgb(224, 192, 230);
