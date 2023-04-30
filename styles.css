@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 
 html,
 body{
@@ -57,7 +57,6 @@ body{
     font-size: 20px;
     line-height: 36px;
     text-align: center;
-  
     color: white;
 }
 
@@ -76,7 +75,7 @@ body{
   }
 
 #arena{
-    background-color: rgba(86, 60, 92, 0.5); /* transparent white */
+    background-color: rgba(86, 60, 92, 0.5); 
     width: 800px;
     height: 300px;
     border-radius: 20px;
@@ -180,3 +179,166 @@ body{
     padding: 20px;
     border-radius: 20px;
 }
+*/
+
+@media (max-width: 768px) {
+
+    html,
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+      background-image: url('./images/60510-Fantasy-Ruin-4k-Ultra-HD-Wallpaper.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #container{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+  
+    .scoreboard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  
+    .score {
+      max-width: 240px;
+      max-height: 50px;
+      background-color: #28112E;
+      border-radius: 12px;
+      border: 3px solid white;
+      display: flex;
+      align-self: center;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+  
+    .col-heading h1 {
+        font-family: "Verdana";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: white;
+    }
+  
+    .col-display {
+      width: 45px;
+      height: 35px;
+      background: #080001;
+      border-radius: 5px;
+      font-family: "Silkscreen", cursive;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 35px;
+      text-align: center;
+      color: #f94f6d;
+    }
+  
+    #arena {
+      background-color: rgba(86, 60, 92, 0.5); 
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    #arena > img {
+      height: 60px;
+    }
+  
+    #naration {
+      font-size: 12px;
+      background-color: rgb(86, 60, 92);
+      padding: 5px;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+    }
+  
+    .btns {
+      background-color: rgba(224, 192, 230, 0.7);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 300px;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 15px;
+      flex-wrap: wrap;
+    }
+  
+    .btn-img {
+        
+      width: 50px;
+      height: 50px;
+      border: 1px solid transparent;
+      border-radius: 60px;
+      background-color: #EDBCA6;
+      margin: 10px;
+      padding: 5px;
+      box-shadow: 0 0 8px rgb(86, 60, 92);
+      cursor: pointer;
+    }
+
+    .heading{
+        font-family: 'Dancing Script', cursive;
+        font-size: 20px;
+        color: white;
+        padding: 0;
+        margin: 0;
+    }
+  
+    .flashCard {
+      width: 90%;
+      height: auto;
+      margin: 20px auto 0 auto;
+      padding: 10px;
+      font-size: 16px;
+      text-align: center;
+      color: white;
+      background-color: #563C5C;
+    }
+    .flashCard > h1{
+        margin: 0;
+        padding: 0;
+    }
+  
+    .btn {
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 12px;
+      font-family: 'Dancing Script', cursive;
+    }
+  
+    .result {
+      background-color: rgb(224, 192, 230);
+      font-size: 25px;
+      border-radius: 10px;
+      padding: 5px;
+    }
+  }
+  
