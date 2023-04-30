@@ -1,4 +1,4 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 
 html,
 body{
@@ -179,7 +179,7 @@ body{
     padding: 20px;
     border-radius: 20px;
 }
-*/
+
 
 @media (max-width: 768px) {
 
@@ -257,7 +257,7 @@ body{
   
     #arena {
       background-color: rgba(86, 60, 92, 0.5); 
-      width: 100%;
+      width: 90%;
       height: 200px;
       margin-top: 10px;
       border-radius: 20px;
